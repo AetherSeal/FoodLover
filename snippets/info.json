@@ -1,0 +1,36 @@
+{
+    "name": "Food Lover",
+    "phone": 97846581,
+    "address": "adadkñalkñlad ipsum lorem",
+    "categories": [{
+        "name": "Appetizers",
+        "description": "this is a great dish!!!",
+        "hash": "A",
+        "imgPath": "images/MenuAppetizer.jpg"
+    }, {
+        "name": "Soups",
+        "description": "this is a great dish!!!",
+        "hash": "A",
+        "imgPath": "images/MenuSoup.jpg"
+    }, {
+        "name": "Fishes or Pastas",
+        "description": "this is a great dish!!!",
+        "hash": "A",
+        "imgPath": "images/MenuFish.jpg"
+    }, {
+        "name": "Main Courses",
+        "description": "this is a great dish!!!",
+        "hash": "A",
+        "imgPath": "images/MenuMainCourse.jpg"
+    }, {
+        "name": "Salads",
+        "description": "this is a great dish!!!",
+        "hash": "A",
+        "imgPath": "images/MenuSalad.jpg"
+    }, {
+        "name": "Desserts",
+        "description": "this is a great dish!!!",
+        "hash": "A",
+        "imgPath": "images/Menudessert.jpg"
+    }]
+}

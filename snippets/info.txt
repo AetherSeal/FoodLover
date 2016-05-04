@@ -1,0 +1,18 @@
+ {
+    "dishes": [{
+        "Name": "Dish",
+        "Description": "this is a great dish!!!",
+        "Hash": "A",
+        "Id": 001
+    }, {
+        "Name": "Dish",
+        "Description": "this is a great dish!!!",
+        "Hash": "A",
+        "Id": 001
+    }, {
+        "Name": "Dish",
+        "Description": "this is a great dish!!!",
+        "Hash": "A",
+        "Id": 001
+    }]
+}

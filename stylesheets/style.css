@@ -1,0 +1,452 @@
+/*base styles*/
+
+body {
+    font-family: 'Dosis', serif;
+    box-sizing: border-box;
+    color: white;
+    background-color: grey
+}
+
+#putMeHere{
+    text-align: center;
+    font-size: -webkit-xxx-large;
+    background-color: yellowgreen;
+}
+
+.loader {
+    display: inline-block;
+    margin: 5em;
+    border-width: 30px;
+    border-radius: 50%;
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    -o-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    border-style: solid;
+    border-color: #444 transparent;
+    text-align: center;
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(359deg);
+    }
+}
+
+@-o-keyframes spin {
+    100% {
+        -moz-transform: rotate(359deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+
+/*navigation bar*/
+
+#header-nav {
+    background-color: white;
+    border-radius: 0px;
+    border: 0px;
+}
+
+#logo-img {
+    background-image: url('../images/foodlover-200.jpg');
+    height: 162px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    /*border: #A636B9 solid;*/
+    margin: 5px;
+}
+
+.navbar-brand {
+    color: #969696;
+    font-family: nunito;
+    margin-left: 1em;
+}
+
+.navbar-brand h1 {
+    font-family: 'Poiret One', cursive;
+    color: #A636B9;
+    margin-top: 35px;
+    font-size: 2.5em;
+    text-shadow: 3px 3px 5px #C3C3C3;
+}
+
+.navbar-brand a:hover,
+.navbar-brand a:focus {
+    text-decoration: none;
+}
+
+
+/*menu mobile button*/
+
+.navbar-header .navbar-toggle,
+.navbar-header span.icon-bar {
+    border: #A649AC solid 1px;
+}
+
+.navbar-header button.navbar-toggle {
+    clear: both;
+}
+
+#nav-list {
+    margin-top: 55px;
+    text-align: center;
+}
+
+#nav-list li a:hover {
+    background: radial-gradient(circle, #A66BCD 10%, white 70%);
+    color:black!important;
+}
+
+.displayCall {
+    display: none;
+}
+
+.displayFooter {
+    display: none;
+}
+
+#logo-img {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    margin: 5px;
+}
+
+.navbar-header .navbar-brand h1 {
+    font-family: 'Poiret One', cursive;
+    color: #A636B9;
+    text-shadow: 3px 3px 5px #C3C3C3;
+}
+
+#nav-list > li.active > a{
+	    background-color: #FFFFFF;
+	    color: #7D1CC6;
+}
+/*end navigation bar*/
+
+
+/*main content index.html*/
+
+#mainContent div.jumbotron {
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+}
+
+#homeTiles {
+    text-align: center;
+}
+
+#menuTile {
+    background-image: url('../images/menuTile.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+}
+
+#specialTile {
+    background-image: url('../images/specialTile.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+}
+
+#mapTile {
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+}
+
+#menuTile,
+#specialTile,
+#mapTile {
+    height: 150px;
+    width: 100%;
+    border: solid #7B609E 1px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+#menuTile > span,
+#specialTile > span,
+#mapTile > span {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    background-color: rgba(123, 96, 158, 0.66);
+    color: white;
+}
+
+#menuTile:hover > span,
+#specialTile:hover> span,
+#mapTile:hover > span {
+    background-color: rgba(124, 2, 216, 0.79);
+    color: white;
+}
+
+
+/*end main content index.html*/
+
+
+/*footer*/
+
+.panel-footer {
+    background-color: rgba(124, 2, 216, 0.79);
+}
+
+#testimonyCol {
+    font-style: italic;
+}
+
+
+/*end footer*/
+
+
+/*main content menu.html*/
+
+#mainContent section div.itemTile {
+    background-color: black;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto 15px auto;
+}
+
+#mainContent section div.itemTile span {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(123, 96, 158, 0.66);
+    opacity: 0.8;
+    width: 100%;
+    color: white;
+}
+
+#mainContent section a:hover span {
+    background-color: rgba(124, 2, 216, 0.79);
+    color: white;
+}
+#categories h2, #categories p{
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+
+/*end main content menu.html*/
+
+
+/*media querys*/
+
+
+/****************** large devices*/
+
+@media (min-width:1200px) {
+    #nav-list li {
+        width: 90px;
+    }
+    #mainContent div.jumbotron {
+        background-image: url('../images/AllFood x4.jpg');
+        height: 798px;
+    }
+}
+
+
+/****************** medium devices*/
+
+@media (min-width:992px) and (max-width:1199px) {
+    #logo-img {
+        background-image: url('../images/foodlover-100.jpg');
+        height: 122px;
+        width: 150px;
+    }
+    .navbar-header .navbar-brand h1 {
+        margin-top: 15px;
+        font-size: 2em;
+    }
+    .navbar-header .navbar-brand span {
+        font-size: 15px;
+    }
+    #nav-list li {
+        width: 90px;
+    }
+    #nav-list {
+        margin-top: 30px;
+    }
+    #mainContent div.jumbotron {
+        background-image: url('../images/AllFood x3.jpg');
+        height: 660px;
+    }
+}
+
+
+/****************** small devices*/
+
+@media (min-width:768px) and (max-width:991px) {
+    #logo-img {
+        background-image: url('../images/foodlover-75.jpg');
+        height: 61px;
+        width: 75px;
+    }
+    .navbar-header .navbar-brand h1 {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 1.5em;
+    }
+    .navbar-header .navbar-brand span {
+        font-size: 10px;
+    }
+    #nav-list li {
+        width: 90px;
+    }
+    #nav-list {
+        margin-top: 0;
+    }
+    #mainContent div.jumbotron {
+        background-image: url('../images/AllFood x2.jpg');
+        height: 511px;
+    }
+    #call-btn {
+        margin-bottom: 15px;
+    }
+    #call-btn a.btn {
+        width: 100%;
+        background-color: rgba(124, 2, 216, 0.79);
+        color: white;
+        font-size: 1.3em;
+    }
+    #call-btn a.btn:hover {
+        background-color: rgb(242, 205, 11);
+        color: black;
+    }
+    .displayCall {
+        display: block;
+    }
+}
+
+
+/****************** xsmall devices*/
+
+@media (min-width:480px) and (max-width:767px) {
+    .displayCall {
+        display: block;
+    }
+    .navbar-header .navbar-brand {
+        height: 75px;
+    }
+    .navbar-header .navbar-brand h1 {
+        font-size: 4em;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .navbar-header .navbar-brand span {
+        font-size: 1.1em;
+    }
+    #nav-list {
+        font-size: 1.5em;
+    }
+    #nav-list li a span {
+        margin-right: 5px;
+    }
+    #mainContent div.jumbotron {
+        background-image: url('../images/AllFood x1.jpg');
+        height: 299px;
+    }
+    #call-btn {
+        margin-bottom: 15px;
+    }
+    #call-btn a.btn {
+        width: 100%;
+        background-color: rgba(124, 2, 216, 0.79);
+        color: white;
+        font-size: 1.3em;
+    }
+    #call-btn a.btn:hover {
+        background-color: rgb(242, 205, 11);
+        color: black;
+    }
+    .displayFooter {
+        display: block;
+        width: 50%;
+    }
+    #testimonyCol,
+    #hoursCol,
+    #addressCol {
+        text-align: center
+    }
+}
+
+
+/****************** super xsmall devices*/
+
+@media (max-width:479px) {
+    .navbar-header .navbar-brand {
+        height: 75px;
+    }
+    .navbar-header .navbar-brand h1 {
+        font-size: 2.7em;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .navbar-header .navbar-brand span {
+        font-size: 0.7em;
+    }
+    #nav-list {
+        font-size: 1.5em;
+    }
+    #nav-list li a span {
+        margin-right: 5px;
+    }
+    #mainContent div.jumbotron {
+        background-image: url('../images/AllFood x1.jpg');
+        height: 299px;
+    }
+    #call-btn {
+        margin-bottom: 15px;
+    }
+    #call-btn a.btn {
+        width: 100%;
+        background-color: rgba(124, 2, 216, 0.79);
+        color: white;
+        font-size: 1em;
+    }
+    #call-btn a.btn:hover {
+        background-color: rgb(242, 205, 11);
+        color: black;
+    }
+    .displayFooter {
+        display: block;
+        width: 50%;
+    }
+    #testimonyCol,
+    #hoursCol,
+    #addressCol {
+        text-align: center
+    }
+    .col-sxs {
+        position: relative;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+        float: left;
+        width: 100%;
+    }
+}
