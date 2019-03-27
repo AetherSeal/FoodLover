@@ -46,29 +46,24 @@ $(function() {
 
         insertLoader("#mainContent");
         /*cargamos el container*/
-        $ajaxTools.sendGetRequest(
+        $ajaxTools.fetchGet(
             "snippets/menuItemContainer.html",
             function(request) {
-
-                /*lo insertamos en el main content*/
-                insertHTML("#mainContent", request.response);
-
-                /*cargamos los items del menu de categorias*/
-                $ajaxTools.sendGetRequest(
-                    "snippets/menuItem.html",
-                    function(request) {
-
-                        for (var i = foodLover.menuInfo.categories.length - 1; i >= 0; i--) {
-                            var myRequest = request.response;
-
-                            myRequest = searchAndReplace(myRequest, '{{name}}', foodLover.menuInfo.categories[i].name);
-                            myRequest = searchAndReplace(myRequest, '{{imgPath}}', foodLover.menuInfo.categories[i].imgPath);
-                            myRequest = searchAndReplace(myRequest, '{{description}}', foodLover.menuInfo.categories[i].description);
-
-                            addHTML("#mainContent section.row", myRequest);
-                        }
-                    }
-                );
+                insertHTML("#mainContent", request);
+            },
+        );
+        /*cargamos los items del menu de categorias*/
+        $ajaxTools.fetchGet(
+            "snippets/menuItem.html",
+            function(request) {
+                const {categories} = foodLover.menuInfo
+                for (var i = categories.length - 1; i >= 0; i--) {
+                    var myRequest = request;
+                    myRequest = searchAndReplace(myRequest, '{{name}}', categories[i].name);
+                    myRequest = searchAndReplace(myRequest, '{{imgPath}}', categories[i].imgPath);
+                    myRequest = searchAndReplace(myRequest, '{{description}}', categories[i].description);
+                    addHTML("#mainContent section.row", myRequest);
+                }
             }
         );
     }
@@ -103,47 +98,39 @@ $(function() {
     document.addEventListener("DOMContentLoaded", function(event) {
 
         /*cargamos informacion del restaurant*/
-        $ajaxTools.sendGetRequest(
-            "snippets/info.json",
-            function(request) {
+        $ajaxTools.fetchGet ("snippets/info.json", request => {
+            debugger
+            var menuInfo = request;
+            foodLover.menuInfo = menuInfo;
+        },'json')
 
-                var menuInfo = JSON.parse(request.response);
-                foodLover.menuInfo = menuInfo;
-            }
-        );
-
-        /*cargamos Landing Page*/
         insertLoader("#mainContent");
-        $ajaxTools.sendGetRequest(
-            "snippets/mainContent.html",
-            function(request) {
-                /*cargamos el snippet del main container*/
-                insertHTML("#mainContent", request.response);
-
-                /*agregamos un listener al jumbotron*/
-                document.querySelector("#mainJumbotron").addEventListener("click", function(event) {
-                    console.log("they click the jumbotron");
-                    var target = document.querySelector("#mainJumbotron h1");
-                    target.innerHTML = "ay caramba!! ya no hay hello world";
-                });
-
-                /*listener al menuTile del landing page*/
-                document.querySelector("#menuTile").addEventListener("click", function(event) {
-                    console.log("they click the menu tile ! lets load the menu");
-                    navBarItems("navButtonMenu");
-                    insertCategories();
-                });
-
-                /*listener al menuTile del landing page*/
-                document.querySelector("#menuMobile").addEventListener("click", function(event) {
-                    console.log("they click the menu tile ! lets load the menu");
-                    navBarItems("navButtonMenu");
-                    insertCategories();
-                });
 
 
-            }
-        );
+
+        const fillMainContent = function(request) {
+            
+            insertHTML("#mainContent", request);
+
+            document.querySelector("#mainJumbotron").addEventListener("click", function(event) {
+                console.log("they click the jumbotron");
+            });
+
+            document.querySelector("#menuTile").addEventListener("click", function(event) {
+                navBarItems("navButtonMenu");
+                insertCategories();
+            });
+
+            document.querySelector("#menuMobile").addEventListener("click", function(event) {
+                navBarItems("navButtonMenu");
+                insertCategories();
+            });
+        }
+        
+        $ajaxTools.fetchGet("snippets/mainContent.html", fillMainContent)
+
+
+
     });
 
 })(window);
