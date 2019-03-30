@@ -1,119 +1,137 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Responsive Menu</title>
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Dosis">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito">
-    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="stylesheets/style.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Responsive Menu</title>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Dosis" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito" />
+	<link href="https://fonts.googleapis.com/css?family=Over+the+Rainbow" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+	<link rel="stylesheet" href="stylesheets/style.css" />
 </head>
 
 <body>
-    <div id="putMeHere">
-    </div>
-    <header>
-        <nav id="header-nav" class="navbar navbar-default">
-            <div class="container">
-                <div class="navbar-header">
-                    <a href="index.html" class="pull-left visible-sm visible-md visible-lg">
-                        <div id="logo-img" alt="Logo">
-                        </div>
-                    </a>
-                    <div class="navbar-brand">
-                        <a href="index.html">
-                            <h1>Food Lover</h1>
-                        </a>
-                        <span>a place to stay a bit longer ..</span>
-                    </div>
-                    <!--icon button only sm devices-->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div id="collapsable-nav" class="navbar-collapse collapse">
-                    <ul id="nav-list" class="nav navbar-nav navbar-right">
-                        <li id="navButtonMenu">
-                            <a id="menuMobile" href="#">
-                                <span class="glyphicon glyphicon-cutlery"></span>
-                                <br class="hidden-xs"> Menu
-                            </a>
-                        </li>
-                        <li id="navButtonAbout">
-                            <a href="#">
-                                <span class="glyphicon glyphicon-user"></span>
-                                <br class="hidden-xs"> About
-                            </a>
-                        </li>
-                        <li id="navButtonReservation">
-                            <a href="#">
-                                <span class="glyphicon glyphicon-calendar"></span>
-                                <br class="hidden-xs"> Reservation
-                            </a>
-                        </li>
-                        <li id="phone-nav" class="hidden-xs">
-                            <a href="tel:099765152">
-                                <span class="glyphicon glyphicon-earphone"></span>
-                                <br>
-                                <span>Call Us!</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <!--end #nav-list-->
-                </div>
-                <!--end #collapsable-nav-->
-            </div>
-            <!--end .container-->
-        </nav>
-        <!--end #header-nav-->
-    </header>
-    <!--end header-->
-    <div id="call-btn" class="container visible-xs visible-sm">
-        <a class="btn" href="tel:099765152">
-            <span class="glyphicon glyphicon-earphone"></span>
-            <br>
-            <span>Call Us!</span>
-            <span class="displayCall">We have delivery! 099765152</span>
-        </a>
-    </div>
-    <div id="mainContent">
+	<div id="putMeHere"></div>
+	<header>
+		<nav class="navbar navbar-dark bg-dark">
+			<!-- Navbar content -->
+		</nav>
 
-    </div>
-    <!-- end #mainContent-->
-    <footer class="panel-footer">
-        <div class="container">
-            <div id="hoursCol" class="col-md-4 col-sm-4 col-xs-12">
-                <span>Hours:</span>
-                <br> Sun-Thurs: 12:00pm-10:00pm
-                <br> Fri: 12:00pm-12:00am
-                <br> Saturday Closed
-                <hr class="displayFooter">
-            </div>
-            <div id="addressCol" class="col-md-4 col-sm-4 col-xs-12">
-                <span>Address:</span>
-                <br>Av. General Rivera 9999
-                <br>Montovideo - Uruguay
-                <hr class="displayFooter">
-            </div>
-            <div id="testimonyCol" class="col-md-4 col-sm-4 col-xs-12">
-                <p>"kill a hand yet eat a plant, kill a hand or meow chase after silly colored fish toys around the house"</p>
-                <p>"Lie on your belly and purr when you are asleep chirp at birds asdflkjaertvlkjasntvkjn (sits on keyboard) so stick butt in face stretch"</p>
-                <p>"Mew paw at beetle and eat it before it gets away but inspect anything brought into the house kitty loves pigs so lick plastic bags"</p>
-                <hr class="displayFooter">
-            </div>
-        </div>
-    </footer>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="javascripts/ajaxUtil.js"></script>
-    <script src="javascripts/script.js"></script>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand" href="index.html">
+				<div id="logo-img" alt="Logo" class="col d-none d-sm-block"></div>
+			</a>
+			<div>
+				<h1 style="		font-family: 'Over the Rainbow', cursive;		color: white;">Food Lover</h1>
+				<span style="		font-family: nunito;		color: white;">a place to stay a bit longer...</span>
+			</div>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+				aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarColor01">
+				<ul class="navbar-nav ml-auto flex-nowrap">
+					<li class="nav-item active mr-auto ml-auto">
+						<a class="nav-link" href="index.html">Home
+							<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item mr-auto ml-auto">
+						<a id="navItemMenu" class="nav-link" href="#">
+							<span class="glyphicon glyphicon-cutlery"></span>Menu
+						</a>
+					</li>
+					<li class="nav-item mr-auto ml-auto">
+						<a id="navItemAbout" class="nav-link" href="#">
+							<span class="glyphicon glyphicon-user"></span>About
+						</a>
+					</li>
+					<li class="nav-item mr-auto ml-auto">
+						<a id="navItemReservation" class="nav-link" href="#">
+							<span class="glyphicon glyphicon-calendar"></span>Reservation
+						</a>
+					</li>
+					<li class="nav-item mr-auto ml-auto">
+						<a id="navItemCall" class="nav-link" href="tel:099765152">
+							<span class="glyphicon glyphicon-earphone"></span>Call Us!
+						</a>
+					</li>
+				</ul>
+				<!--form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+            <button class="btn btn-outline-info my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form-->
+			</div>
+		</nav>
+	</header>
+	<!--end header-->
+	<div id="call-btn" class="d-none d-sm-block d-md-block d-lg-none">
+		<a class="btn" href="tel:099765152">
+			<span class="glyphicon glyphicon-earphone"></span>
+			<br />
+			<span>Call Us!</span>
+			<span class="displayCall">We have delivery! 099765152</span>
+		</a>
+	</div>
+	<div id="mainContent" class="container-fluid"></div>
+	<!-- end #mainContent-->
+	<footer class="panel-footer">
+		<div class="container">
+			<div class="row">
+				<div id="hoursCol" class="col-md-4 col-sm-4 col-xs-12">
+					<span>Hours:</span>
+					<br />
+					Sun-Thurs: 12:00pm-10:00pm
+					<br />
+					Fri: 12:00pm-12:00am
+					<br />
+					Saturday Closed
+					<hr class="displayFooter" />
+				</div>
+				<div id="addressCol" class="col-md-4 col-sm-4 col-xs-12">
+					<span>Address:</span>
+					<br />Av. General Rivera 9999
+					<br />Montovideo - Uruguay
+					<hr class="displayFooter" />
+				</div>
+				<div id="testimonyCol" class="col-md-4 col-sm-4 col-xs-12">
+					<p>
+						"kill a hand yet eat a plant, kill a hand or meow chase after silly colored fish toys around the
+						house"
+					</p>
+					<p>
+						"Lie on your belly and purr when you are asleep chirp at birds asdflkjaertvlkjasntvkjn (sits on
+						keyboard) so stick butt in face stretch"
+					</p>
+					<p>
+						"Mew paw at beetle and eat it before it gets away but inspect anything brought into the house
+						kitty loves pigs so lick plastic bags"
+					</p>
+					<hr class="displayFooter" />
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+	</script>
+
+	<script src="javascripts/ajaxUtil.js"></script>
+	<script src="javascripts/script.js"></script>
 </body>
 
 </html>
